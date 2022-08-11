@@ -1,0 +1,394 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+}
+html{
+    height: 100%;
+}
+body{
+    min-height: 100%;
+}
+/*GRIDS MAQUETADO*/
+
+.container-header{
+    grid-area: container-header;
+    background-image: linear-gradient(rgb(197, 38, 197), rgba(10, 3, 10, 0));
+    box-shadow: 0px 0px 50px #000000;
+    border-radius: 9px solid black;
+}
+.container-aside{
+    grid-area: container-aside;
+    background-color: aquamarine;
+    box-shadow: 0px 0px 50px #000000;
+    border-radius: 9px solid black;
+}
+.container-article{
+    grid-area: container-article;
+    background-color: bisque;
+    box-shadow: 0px 0px 50px #000000;
+    border-radius: 9px solid black;
+}
+
+.container-footer{
+    grid-area: container-footer;
+    background-color: blueviolet;
+    box-shadow: 0px 0px 50px #000000;
+    border-radius: 9px solid black;
+}
+.container-grid{
+    display: grid;
+    gap: 10px;
+    background-color: rgb(182, 178, 178);
+    text-align: center;
+    grid-template: 
+    "container-header" 90px
+    "container-aside"  400px 
+    "container-article" auto
+    "container-footer" 200px;
+}
+/*FIN DEL MAQUETADO GRID*/
+/*Header y logo*/
+.container-header{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+}
+.button-header button{
+    border-radius: 10%;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 1);
+    cursor: pointer;
+    margin-right: 10px;
+    background-image: linear-gradient(rgba(141, 6, 141, 0.767), rgb(255, 248, 252), rgba(243, 13, 166, 0.699) );
+}
+.button-header button:hover{
+    background-color: rgba(0, 0, 0, 0.726);
+    transition: all ease 0.5s;
+    color: #fffdfd;
+    text-shadow: 0px 1px 10px black;
+}
+.nav-header a{
+    text-decoration: none;
+    padding: 4px 7px;
+}
+.nav-header a:hover{
+    background-color: rgba(182, 10, 170, 0.836);
+    color: #ffffff;
+    transition: all ease 0.3s;
+    text-align: center;
+    border-radius: 8%;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.61);
+}
+.logo img{
+    height: 90px;
+    display: flex;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 1);
+    margin-left: 12px;
+}
+.logo img:hover{
+    transform: scale(1.1);
+    transition: all 0.7s;
+}
+/*sections*/
+.section1{
+    height: 500px;
+    width: auto;
+    background-image: linear-gradient(rgb(114, 31, 86), rgba(104, 64, 104, 0.692));
+    border: #292626 solid;
+    text-align: center;
+}
+.section1 h2{
+    line-height: 150px;
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif; 
+    color: #fff;
+    text-shadow: 0px 0px 26px rgba(0, 0, 0, 1); 
+}
+.section1 p{
+    display: flex;
+    justify-content: center;
+    padding: 0px 20px;
+    color: #e2d7d7;
+}
+
+.section2{
+    height: 500px;
+    width: auto;
+    background-image: linear-gradient(rgb(114, 31, 86), rgba(104, 64, 104, 0.692));
+    border: #292626 solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section2 img{
+    border: #000000 5px solid;
+    box-shadow: 0px 0px 60px black;
+}
+.section2 img:hover{
+    transition: all ease 0.9s;
+    transform: scale(1.1);
+    filter: brightness(1.1);
+}
+/*Insta Sticky*/
+    .logoInstagramfixed{
+        position: fixed;
+        height: 55px;
+        width: 55px;
+        background-image: linear-gradient(rgb(114, 37, 114), rgb(255, 14, 147), rgb(255, 239, 14) );
+        bottom: 30px;
+        right: 30px;
+        border-radius: 50%;
+        line-height: 58px;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 0px 1px 10px black;
+        z-index: 100;
+    }
+    .logoInstagramfixed i{
+        height: 70px;
+        justify-items: center;
+        color: #fff;
+        font-size: 30px;
+    }
+    .logoInstagramfixed:hover{
+    transition: all ease 0.5s;
+    transform: scale(1.1);
+    filter: opacity(0.8);
+    }
+    .logofacebookfixed{
+        position: fixed;
+        height: 55px;
+        width: 55px;
+        background-image: linear-gradient(rgb(17, 5, 121), rgba(228, 220, 224, 0.678), rgb(22, 7, 77) );
+        bottom: 30px;
+        right: 95px;
+        border-radius: 50%;
+        line-height: 58px;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 0px 1px 10px black;
+        z-index: 100;
+    }
+    .logofacebookfixed i{
+        height: 70px;
+        justify-items: center;
+        color: #fff;
+        font-size: 30px;
+    }
+    .logofacebookfixed:hover{
+    transition: all ease 0.5s;
+    transform: scale(1.1);
+    filter: opacity(0.8);
+    }
+
+
+/*sections seccion Quienes somos*/
+/*section1*/
+#Sections__Quienes-Somos1{
+    height: auto;
+    width: auto;
+    padding: 40px;
+    background-image: linear-gradient(rgba(134, 103, 124, 0.527), rgba(104, 64, 104, 0.692));
+}
+#Sections__Quienes-Somos1 img:hover{
+    transform: scale(1.1);
+    transition: all 0.7s;
+
+}
+.sectionNosotros1 h2{
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.sectionNosotros1 p{
+    display: flex;
+    padding-bottom: 30px;
+    align-items: center;
+    justify-content: center;
+}
+.sectionNosotros1 i{
+    color: rgb(243, 197, 127);
+    padding-bottom: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.Quienes-Somos1{
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+/*section2*/
+#Sections__Quienes-Somos2{
+    background-image: linear-gradient(rgba(134, 103, 124, 0.527), rgba(104, 64, 104, 0.692));
+    height: 700px;
+    padding: 60px 90px;
+}
+#Sections__Quienes-Somos2 img{
+    height: 450px;
+}
+
+#Sections__Quienes-Somos2 h3{
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    color: #fff;
+    margin: 20px 0px 10px 0px;
+}
+#Sections__Quienes-Somos2 p{
+    display: flex;
+    justify-content: center;
+    font-size: 19px;
+}
+#Sections__Quienes-Somos3{
+    height: 800px;
+    padding: 30px;
+    background-image: linear-gradient(rgba(104, 64, 104, 0.692), rgba(134, 103, 124, 0.527));
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+#Sections__Quienes-Somos3 img{
+    height: auto;
+    border-radius: 2%;
+    height: 400px;
+}
+.img_somos1 img{
+    margin: 20px;
+}
+.img_somos1 span{
+    color: #f11cbc;
+    text-shadow:20px 20px 50px #000000;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+}
+.img_somos1 h3{
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+}
+.img_somos1 p{
+    font-size: 16px;
+    margin: 8px;
+    display: flex;
+    color: #e2d6d6;
+}
+/*Seccion forms*/
+.forms_footer{
+    display: flex;
+    justify-content: center;
+    height: auto;
+    background-color: #fff;
+    font-size: 18px;
+}
+div.forms2{
+    text-align: start;
+    padding: 20px 70px;
+}
+div.forms2 p{
+    color: #6d6363;
+}
+
+/*FOOTER*/
+.footer{
+    height: auto;
+    background-image: linear-gradient(rgb(114, 31, 86), rgba(104, 64, 104, 0.692));
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 18px;
+    padding: 10px 0px;
+}
+.footer a{
+    text-align: center;
+    justify-content: center;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+}
+footer .instagram a:hover{
+    transition: all ease 0.1s;
+    color: rgb(0, 0, 0);
+}
+footer .facebook a:hover{
+    transition: all ease 0.1s;
+    color: rgb(0, 0, 0);
+}
+/*SECCION CONTACTO*/
+.contacto_container{
+    margin: 20px;
+}
+.contacto_container h2{
+    margin: 10px;
+    font-size: 30px;
+}
+.contacto_container p{
+    color: #473c3c;
+}
+/*Imagen de seccion contacto*/
+.img-contenedor div{
+    display: flex;
+    justify-content: center;
+}
+.img-contenedor img{
+    height: 700px;
+    width: auto;
+    border-radius: 3%;
+    margin: 40px;
+    border: #d1d1d1 5px solid;
+}
+.img-contenedor img:hover{
+    transform: scale(1.1);
+    transition: all 0.7s;
+    box-shadow: 0px 1px 20px black;
+}
+/*BARS diseno */
+.barsheader{
+    right: 5px;
+    top: 5px;
+    font-size: 60px;
+}
+
+/*Celular*/
+@media (max-width: 500px){
+    .nav-header{
+        display: none;
+    }
+    .button-header{
+        display: none;
+    }
+}
+/*Tablets*/
+@media (min-width: 600px){
+    .container-grid{
+        display: grid;
+        gap: 10px;
+        grid-template: 
+        "container-header  container-header" 90px 
+        "container-article container-aside"  auto
+        "container-article container-aside"  auto
+        "container-footer  container-footer" auto/
+            auto          150px;
+    }
+}
+/*Desk*/
+@media (min-width: 900px){
+    .container-grid{
+        display: grid;
+        gap: 10px;
+        grid-template: 
+        "container-header container-header  container-header" 140px 
+        "container-article container-article container-aside"  auto
+        "container-article container-article container-aside"  auto
+        "container-footer container-footer  container-footer" 100px/
+            auto          auto            150px;
+    }
+}
