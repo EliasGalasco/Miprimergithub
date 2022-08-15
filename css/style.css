@@ -96,8 +96,19 @@ text-align: center;
     border: #292626 solid;
     text-align: center;
 }
+.aos-init.aos-animate{
+    display: inline-block;
+    justify-content: center;
+}
+.aos-init.aos-animate img{
+    width: 600px;
+    height: 500px;
+    margin: 10px;
+    border: 5px black solid;
+    box-shadow: 0px 5px 20px black;
+}
 .section1 h2{
-    line-height: 150px;
+    line-height: 180px;
     display: flex;
     justify-content: center;
     font-size: 40px;
@@ -124,6 +135,7 @@ text-align: center;
 .section2 img{
     border: #000000 5px solid;
     box-shadow: 0px 0px 60px black;
+    margin: 10px;
 }
 .section2 img:hover{
     transition: all ease 0.9s;
@@ -247,7 +259,7 @@ text-align: center;
     height: auto;
     padding: 30px;
     background-image: linear-gradient(rgba(104, 64, 104, 0.692), rgba(134, 103, 124, 0.527));
-    display: flex;
+    display: inline-block;
     text-align: center;
     justify-content: center;
 }
@@ -276,6 +288,8 @@ text-align: center;
     display: flex;
     color: #e2d6d6;
 }
+
+
 /*Seccion forms*/
 .forms_footer{
     height: auto;
@@ -332,10 +346,11 @@ footer .facebook a:hover{
 }
 /*Imagen de seccion contacto*/
 .img-contenedor div{
-    display: flex;
+    display: inline-block;
     justify-content: center;
 }
 .img-contenedor img{
+    display: inline-block;
     height: 600px;
     width: auto;
     border-radius: 3%;
@@ -411,7 +426,7 @@ footer .facebook a:hover{
         grid-template: 
         "container-header container-header  container-header" 150px 
         "container-article container-article container-aside"  auto
-        "container-article container-article container-aside" 800px
+        "container-article container-article container-aside" auto
         "container-footer container-footer  container-footer" auto/
         800px          auto            120px;
     }
