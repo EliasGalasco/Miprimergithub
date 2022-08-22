@@ -1,32 +1,189 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova&family=Taviraj:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" type="image/jpg" href="imagenes/logo.jpg">
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="icon" type="image/jpg" href="../imagenes/logo.jpg">
     <title>NaturalShine</title>
 </head>
-<body class="container-grid">
-    <!--HEADER-->
-    <header class="container-header">
-        <div class="logo"><a href="../index.html"><img src="../imagenes/logo.jpg" alt=""></a></div>
-        <nav class="nav-header">
-            <a href="../index.html">Inicio</a>
-            <a href="../paginas/tienda.html">Tienda</a>
-            <a href="../paginas/sobre-nosotros.html">Sobre Nosotros</a>
+
+<body>
+    <!--NAVBAR-->
+    <div class="bg-nav fixed-top">
+        <nav class="navbar navbar-expand-sm navbar-dark">
+            <div class="container-fluid navbar-padre">
+                <nav class="navbar navbar-light">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">
+                            <img src="../imagenes/logo-removebg-preview.png" alt="" width="90" height="80"
+                                class="d-inline-block align-text-center">
+                            Natural Shine
+                        </a>
+                    </div>
+                </nav>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse navbar-list" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../paginas/tienda.html">Tienda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../paginas/sobre-nosotros.html">Sobre Nosotros</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Mas
+                                Opciones</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="../paginas/nuestras-redes.html">Nuestras Redes</a>
+                                </li>
+                                <li><a class="dropdown-item" href="../paginas/Trabaja.html">Trabaja Para Nosotros</a>
+                                </li>
+                                <li><a class="dropdown-item" href="../paginas/contacto.html">Contacto</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <a class="btn btn-navbar btn-primary" href="../paginas/registro.html" role="button">Ingresa</a>
+            </div>
         </nav>
-        <div class="button-header"><a href="../paginas/contacto.html"><button>Contactos</button></a></div>
-        <div class="barsheader"><i class="fa-solid fa-bars"></i></div>
-    </header>
-    <aside class="container-aside">Aside</aside>
-        <!--Logo de instgram y facebook fixed-->
+    </div>
+    <!--Slider-->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../imagenes/cooworkig.jpg" class="d-block w-100" alt="Personas mirando una computadora">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../imagenes/cooworkig2.jpg" class="d-block w-100" alt="Personas hablando">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../imagenes/cooworkig3.jpg" class="d-block w-100" alt="personas de trabajo">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previo</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguente</span>
+        </button>
+    </div>
+    <!--MAIN INICIA-->
+    <main class="card-group container card-main justify-content-center">
+            <section class="Quienes-Somos1 sectionNosotros1 row">
+                <h2>Años de trayectoria y calidad garantizada</h2>
+                <p>En Natural Shine tenemos experiencia en el rubro, somos pioneros y lideres. Todos nuestros productos están realizados por especialistas.</p>
+                <span class="emoji col-12 col-md-4">
+                    <i style="font-size: 4rem;" class="item_content fas fa-laugh-beam text-gradient-site"></i>                    <p>En Natural Shine estamos apasionados en lo que hacemos . Sentimos un sentimiento muy fuerte entre el equipo de trabajo hacia los clientes.
+                    </p>
+                </span>
+                <span class="emoji col-12 col-md-4">
+                    <i style="font-size: 4rem;" class="item_content fas fa-award text-gradient-site"></i>
+                    <p>Hasta límites un poco exagerados incluso. Pero en lo que hacemos, brindamos la máxima calidad. Entendemos que si estás aquí es porque quieres exactamente eso.</p>
+                </span>
+                <span class="empoji col-12 col-md-4">
+                    <i style="font-size: 4rem;" class="item_content fas fa-envelope text-gradient-site"></i> 
+                    <p>Simplemente nos gusta un montón nuestro trabajo, nos lo pasamos bien haciéndolo y nos encanta la idea de que haya gente que adquiera nuestros productos.</p>
+                </span>
+            </section>
+        </div>
+        <div class="row justify-content-center">
+            <div class="card col-12 col-md-12 col-lg-4 m-1">
+                <img src="../imagenes/equipo-de-trabajo1.jpg" class="card-img-top" alt="grupo de personas en una mesa">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                        additional content. This content is a little bit longer.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+            <div class="card col-12 col-md-6 col-lg-4 m-1">
+                <img src="../imagenes/equipo-de-trabajo3.jpg" class="card-img-top" alt="grupo de personas en una mesa">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.
+                    </p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+            <div class="card col-12 col-md-12 col-lg-4 m-1">
+                <img src="../imagenes/equipo-de-trabajo2.jpg" class="card-img-top" alt="Personas aplaudiendo">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                        additional content..</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+        </div>
+        <!--CARDS 2-->
+        <div data-aos="fade-right"  class="row card2">
+            <div class="col-12 col-md-4">
+                <img src="../imagenes/Quienes1.jpg" class="img-fluid card2" alt="Imagen-contacto">
+            </div>
+            <div class="col-12 col-md-8">
+                <h2>Ventas por mayor y menor todos los artículos</h2>
+                <span>En Natural Shine siempre tendrás opciones a tu alcance</span>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates et, nisi numquam accusamus nulla
+                    ab saepe id. Ex molestiae aut deleniti distinctio id. Odio iste architecto, repudiandae fuga
+                    quisquam quia! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus eum iste cum id
+                    quod dolor vero est suscipit sunt porro neque eligendi?</p>
+            </div>
+        </div>
+        <div data-aos="fade-left"  class="row card2">
+            <div class="col-12 col-md-8 ">
+                <h2>Años brindando de seriedad y compromiso</h2>
+                <span>Sin limitaciones a la hora de la excelencia</span>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates et, nisi numquam accusamus nulla
+                    ab saepe id. Ex molestiae aut deleniti distinctio id. Odio iste architecto, repudiandae fuga
+                    quisquam quia! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus eum iste cum id
+                    quod dolor vero est suscipit sunt porro neque eligendi?</p>
+            </div>
+            <div class="col-12 col-md-4">
+                <img src="../imagenes/Quienes2.jpg" class="img-fluid card2" alt="Imagen-contacto">
+            </div>
+        </div>   
+    </main>
+    <!--MAIN FIN-->
+    <!--Logo de instgram y facebook fixed-->
     <div class="logoInstagramfixed">
         <a target="_blank" href="https://www.instagram.com/natural_shiine/">
             <i class="fa-brands fa-instagram"></i>
@@ -37,76 +194,120 @@
             <i class="fa-brands fa-facebook-f"></i>
         </a>
     </div>
-    <!--Section-->
-    <main class="container-article">
-        <article class="sectionNosotros1" id="Sections__Quienes-Somos1">
-                <h2>Años de trayectoria y calidad garantizada</h2>
-                <p>En Natural Shine tenemos experiencia en el rubro, somos pioneros y lideres. Todos nuestros productos están realizados por especialistas.</p>
-                <section class="Quienes-Somos1">
-                    <span class="emoji">
-                        <i style="font-size: 4rem;" class="item_content fas fa-laugh-beam text-gradient-site"></i>                    <p>En Natural Shine estamos apasionados en lo que hacemos . Sentimos un sentimiento muy fuerte entre el equipo de trabajo hacia los clientes.
-                        </p>
-                    </span>
-                    <span class="emoji">
-                        <i style="font-size: 4rem;" class="item_content fas fa-award text-gradient-site"></i>
-                        <p>Hasta límites un poco exagerados incluso. Pero en lo que hacemos, brindamos la máxima calidad. Entendemos que si estás aquí es porque quieres exactamente eso.</p>
-                    </span>
-                    <span class="empoji">
-                        <i style="font-size: 4rem;" class="item_content fas fa-envelope text-gradient-site"></i> 
-                        <p>Simplemente nos gusta un montón nuestro trabajo, nos lo pasamos bien haciéndolo y nos encanta la idea de que haya gente que adquiera nuestros productos.</p>
-                    </span>
-                </section>
-                <section class="sectionNosotros2" id="Sections__Quienes-Somos2">
-                            <img src="../imagenes/cooworkig.jpg" alt="imagen de dos personas mirando una computadora">
-                            <h3>Tus necesidades son nuestra prioridad</h3>
-                            <p>Natural Shine esta compuesto de personas positivas y pro-activas 
-                </section> <hr>
-                <section class="sectionNosotros3" id="Sections__Quienes-Somos3">
-                    <div class="img_somos1">
-                        <img src="../imagenes/cooworkig2.jpg" alt="grupo de personas viendo una notebook">
-                        <span>Te brindamos máxima confianza y credibilidad</span>
-                        <h3>Natural Shine es sinónimo de sinceridad y transparencia</h3>
-                        <p>Nuestra meta es clara, convertirnos en la empresa líder de nuestro sector, para seguir ayudando a cada vez más personas brindándoles productos a un precio cada vez más bajo y una calidad cada vez mayor. <br>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae asperiores vel blanditiis repellendus, maxime modi odit voluptas quisquam et maiores eligendi magnam quod aliquam facilis rem? Odio, minima facere, animi consectetur nulla asperiores vero quos quo, labore accusamus illum doloremque maxime ullam eos iure? Sequi facilis nulla aliquam beatae repellendus accusamus pariatur iure ullam expedita possimus, inventore fuga nam, explicabo quod dolore! Amet quae vero iure laboriosam deserunt tempore adipisci dolorum at temporibus recusandae necessitatibus, ullam aliquid ea ratione laudantium magnam non magni est modi alias eos voluptates consectetur dignissimos! Itaque doloribus nostrum sed, incidunt soluta inventore qui cumque perspiciatis.</p>
+    <!--Forms-->
+    <div class="container-fluid forms">
+        <form class="row g-3 needs-validation" novalidate>
+            <h2>Contactanos!</h2>
+            <div class="col-md-4">
+                <label for="validationCustom01" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="validationCustom01" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <label for="validationCustom02" class="form-label">Apellido</label>
+                <input type="text" class="form-control" id="validationCustom02" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <label for="validationCustomUsername" class="form-label">Hotmail</label>
+                <div class="input-group has-validation">
+                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                    <input type="text" class="form-control" id="validationCustomUsername"
+                        aria-describedby="inputGroupPrepend" required>
+                    <div class="invalid-feedback">
+                        Porfavor escribe un hotmail.
                     </div>
-                    <div class="img_somos1">
-                        <img src="../imagenes/cooworkig3.jpg" alt="grupo de personas viendo una notebook">
-                        <span>Te garantizamos productos increíbles</span>
-                        <h3>Hacemos todo con pasión y eso lo trasmitimos siempre</h3>
-                        <p>En nuestro ambiente como empresa hacemos foco en el trabajo en equipo, donde la tolerancia, el respeto, la admiración y la consideración son las prioridades a toda hora. <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit hic nobis in aut exercitationem tempora explicabo quisquam repudiandae facilis, possimus suscipit perferendis voluptate, optio placeat a nesciunt distinctio consequuntur dignissimos corrupti officia recusandae saepe aliquam? Quae iure, pariatur sunt beatae fugiat distinctio, reiciendis quaerat eligendi possimus recusandae excepturi obcaecati vitae esse numquam aperiam blanditiis dolorum at. Delectus, nobis, repellat vero cumque repellendus quas obcaecati dolore ipsam facilis pariatur omnis. Beatae molestias ducimus impedit incidunt numquam adipisci quis nihil vero provident magnam? Error, ipsam placeat molestiae itaque voluptatibus omnis quae odio maiores enim vitae, temporibus cumque, eius in fuga alias nemo!</p>
-                    </div>
-                </section>
-        </article>
+                </div>
+            </div>
+            <div class=" col-12 col-md-6">
+                <label for="validationCustom03" class="form-label">Ciudad</label>
+                <input type="text" class="form-control" id="validationCustom03" required>
+                <div class="invalid-feedback">
+                    Porfavor escribe una ciudad.
+                </div>
+            </div>
+            <div class="col-12 col-md-3">
+                <label for="validationCustom03" class="form-label">Provincia</label>
+                <input type="text" class="form-control" id="validationCustom03" required>
+                <div class="invalid-feedback">
+                    Porfavor escribe una provincia.
+                </div>
+            </div>
+            <div class="col-12 col-md-3">
+                <label for="validationCustom05" class="form-label">Codigo Postal</label>
+                <input type="text" class="form-control" id="validationCustom05">
+                <div class="invalid-feedback">
+                    Coloca un codigo valido.
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+            </div>
+            <div class="form-floating">
+                <textarea class="form-control" placeholder="Comentarios" id="floatingTextarea2"
+                    style="height: 100px"></textarea>
+                <label for="floatingTextarea2">Comentarios</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                <label class="form-check-label" for="invalidCheck">
+                    Aceptar terminos y condiciones.
+                </label>
+                <div class="invalid-feedback">
+                    Debes aceptar los terminos.
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <button class="btn btn-primary" type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+    <!--Forms FIN-->
     </main>
-    <footer class="container-footer">
-        <section class="forms_footer">
-            <div class="forms2">
-                <span class="title-forms2">Datos de Contacto</span> <br>
-                <p>No dudes en ponerte en contacto con nosotros con la siguiente información.</p> <br>
-                <span><i class="fa-brands fa-whatsapp"></i>          3415322084</span> <br>
-                <span><i class="fa-solid fa-envelope"></i> eliasgalasco@gmail.com</span> <br>
-                <span><i class="fa-solid fa-clock-rotate-left"></i> Lunes a domingo de 12:00p.m a 20:00p.m</span> <br>
-                <span class="FC"><i class="fa-brands fa-facebook-f"></i><a target="_blank" href="https://www.facebook.com/profile.php?id=100078172969262&is_tour_dismissed=true"> Ir a nuestro Facebook </a> <br>
-                <span class="INS"><i class="fa-brands fa-instagram"></i> <a target="_blank" href="https://www.instagram.com/natural_shiine/"> Ir a nuestro Instagram </a>
-                </span> <br> 
+    <!--::::Pie de Pagina::::::-->
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="../imagenes/logo-removebg-preview.png" alt="Logo de NaturalShine">
+                    </a>
+                </figure>
             </div>
-            <div class="forms2">
-                <span class="title-forms2">Completa el Formulario</span><br>
-                <form class="forms_label" action="" enctype="text/plain" method="post">
-                    <input class="forms_label--hijo" placeholder="Nombre" type="text" name="nombre" required><br>
-                    <input class="forms_label--hijo" placeholder="Apellido" type="text" name="apellido" required><br>
-                    <input class="forms_label--hijo" placeholder="Correo Electronico" type="email" required name="email" ><br>
-                    <textarea name="areadetexto" id="" rows="6" cols="30" placeholder="Agrega un comenta zrio"></textarea><br>
-                    <input class="" type="submit" value="Finalizar">
-                    <input class="" type="reset"> 
-                </form>
+            <div class="box">
+                <h2>SOBRE NOSOTROS</h2>
+                <p>Somos Una Empresa de Profesionales en nuestro tema.</p>
+                <p>No dudes en comunicarte con nosotros por cualquier consulta.</p>
             </div>
-        </section>
-        <div class="footer">
-            <strong class="derechos">Derechos reservados S.R.L</strong> <br>
-            <strong class="facebook"> <a target="_blank" href="https://www.facebook.com/profile.php?id=100078172969262&is_tour_dismissed=true"> <i class="fa-brands fa-facebook-f"></i>  Natural Shine</strong></a> <br>
-            <strong class="instagram"> <a target="_blank" href="https://www.instagram.com/natural_shiine/"><i class="fa-brands fa-instagram"></i>  Natural_Shiine</strong></a>
+            <div class="box">
+                <h2>SIGUENOS</h2>
+                <div class="red-social">
+                    <a href="https://www.instagram.com/natural_shiine/" class="fa fa-facebook"></a>
+                    <a href="https://www.facebook.com/profile.php?id=100078172969262&is_tour_dismissed=true"
+                        class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-youtube"></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2022 <b>NaturalShine</b> - Todos los Derechos Reservados.</small>
         </div>
     </footer>
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
+
 </html>
