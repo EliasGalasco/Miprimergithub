@@ -339,7 +339,13 @@ a .mainbox{
     padding: 2%;
 }
 /*FIN Seccion REGISTRO*/
-
+/*Trabaja con nosotros*/
+.imgcontrato img{
+    box-shadow: 0px 1px 30px black;
+}
+.imgcontrato h2{
+    text-shadow: 0px 1px 30px rgb(255, 255, 255);
+}
 
 
 @media screen and (max-width:800px){
