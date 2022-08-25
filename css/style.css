@@ -365,6 +365,7 @@ a .mainbox{
 .cardShop{
     transform: none !important;
     background-color: none !important;
+    width: auto;
 }
 
 @media screen and (max-width:800px){
