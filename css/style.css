@@ -185,7 +185,7 @@ span {
   }
 }
 @media (max-width: 570px) {
-  .slider img {
+  .carousel-item img {
     height: 500px;
   }
 }
