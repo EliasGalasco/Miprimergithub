@@ -376,3 +376,8 @@ a .mainbox{
         padding: 35px 0px;
     }
 }
+@media (max-width:600px){
+    .slide img{
+        height: 600px;
+    }
+}
