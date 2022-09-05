@@ -42,7 +42,7 @@ a.nav-link {
   height: 250px;
   width: auto;
 }
-.card .card:hover {
+.card:hover {
   transform: scale(1.1);
   transition: all 0.7s;
 }
@@ -101,20 +101,20 @@ span {
   color: #fff;
   font-size: 30px;
 }
-.logoInstagramfixed :hover {
+.logoInstagramfixed:hover {
   transition: all ease 0.5s;
   transform: scale(1.1);
   filter: opacity(0.8);
 }
 
 /*:::::Pie de Pagina*/
-.pie-pagina {
+.pie-pagina, .grupo-1 {
   margin-top: 20px;
   width: 100%;
   background-color: #0a141d;
 }
 
-.pie-pagina .grupo-1 {
+.pie-pagina .grupo-1, .grupo-1 .grupo-1 {
   width: 100%;
   max-width: 1200px;
   margin: auto;
@@ -124,7 +124,7 @@ span {
   padding: 45px 0px;
 }
 
-.pie-pagina .grupo-1 .box figure {
+.pie-pagina .grupo-1 .box figure, .grupo-1 .grupo-1 .box figure {
   width: 100%;
   height: 100%;
   display: flex;
@@ -132,22 +132,22 @@ span {
   align-items: center;
 }
 
-.pie-pagina .grupo-1 .box figure img {
+.pie-pagina .grupo-1 .box figure img, .grupo-1 .grupo-1 .box figure img {
   width: 250px;
 }
 
-.pie-pagina .grupo-1 .box h2 {
+.pie-pagina .grupo-1 .box h2, .grupo-1 .grupo-1 .box h2 {
   color: #fff;
   margin-bottom: 25px;
   font-size: 20px;
 }
 
-.pie-pagina .grupo-1 .box p {
+.pie-pagina .grupo-1 .box p, .grupo-1 .grupo-1 .box p {
   color: #efefef;
   margin-bottom: 10px;
 }
 
-.pie-pagina .grupo-1 .red-social a {
+.pie-pagina .grupo-1 .red-social a, .grupo-1 .grupo-1 .red-social a {
   display: inline-block;
   text-decoration: none;
   width: 45px;
@@ -160,37 +160,107 @@ span {
   transition: all 300ms ease;
 }
 
-.pie-pagina .grupo-1 .red-social a:hover {
+.pie-pagina .grupo-1 .red-social a:hover, .grupo-1 .grupo-1 .red-social a:hover {
   color: aqua;
 }
 
-.pie-pagina .grupo-2 {
+.pie-pagina .grupo-2, .grupo-1 .grupo-2 {
   background-color: #0a1a2a;
   padding: 15px 10px;
   text-align: center;
   color: #fff;
 }
 
-.pie-pagina .grupo-2 small {
+.pie-pagina .grupo-2 small, .grupo-1 .grupo-2 small {
   font-size: 15px;
 }
 
-@media (max-width: 836px) {
-  .navbar-list {
-    display: flex;
-    justify-content: start !important;
-  }
-  .btn-navbar {
-    display: none;
-  }
+/*-----------Maps---------*/
+.img--10px {
+  box-shadow: 0px 1px 10px black;
+  border: 5px solid black;
+  background-color: red;
+  line-height: 200px;
+  text-align: center;
+  font-size: 10px;
+  justify-items: center;
+  height: 200px;
+  width: 500px;
+  color: #020202;
+  font-weight: bold;
+  margin: 5px;
 }
+
+.img--20px {
+  box-shadow: 0px 1px 10px black;
+  border: 5px solid black;
+  background-color: blue;
+  line-height: 200px;
+  text-align: center;
+  font-size: 20px;
+  justify-items: center;
+  height: 200px;
+  width: 500px;
+  color: #020202;
+  font-weight: bold;
+  margin: 5px;
+}
+
+.img--30px {
+  box-shadow: 0px 1px 10px black;
+  border: 5px solid black;
+  background-color: yellow;
+  line-height: 200px;
+  text-align: center;
+  font-size: 30px;
+  justify-items: center;
+  height: 200px;
+  width: 500px;
+  color: #020202;
+  font-weight: bold;
+  margin: 5px;
+}
+
+.img--40px {
+  box-shadow: 0px 1px 10px black;
+  border: 5px solid black;
+  background-color: coral;
+  line-height: 200px;
+  text-align: center;
+  font-size: 40px;
+  justify-items: center;
+  height: 200px;
+  width: 500px;
+  color: #020202;
+  font-weight: bold;
+  margin: 5px;
+}
+
+/*-------mixins------------*/
 @media (max-width: 570px) {
   .carousel-item img {
     height: 500px;
   }
 }
+
+/*---------mixins2----------*/
+@media (max-width: 836px) {
+  .navbar-list {
+    display: flex;
+    justify-content: start;
+  }
+}
+
+@media (max-width: 836px) {
+  .btn-navbar {
+    display: none;
+    justify-content: none;
+  }
+}
+
+/*---------mixins3---------*/
 @media screen and (max-width: 800px) {
-  .pie-pagina .grupo-1 {
+  .pie-pagina .grupo-1, .grupo-1 .grupo-1 {
     width: 90%;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 30px;

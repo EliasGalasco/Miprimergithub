@@ -48,7 +48,7 @@ a.nav-link {
         height: 250px;
         width: auto;
     }
-    .card:hover {
+    &:hover {
         transform: scale(1.1);
         transition: all 0.7s;
     }
@@ -108,7 +108,7 @@ span {
         color: #fff;
         font-size: 30px;
     }
-    :hover {
+    &:hover {
         transition: all ease 0.5s;
         transform: scale(1.1);
         filter: opacity(0.8);
@@ -121,7 +121,9 @@ span {
     width: 100%;
     background-color: #0a141d;
 }
-
+.grupo-1{
+    @extend .pie-pagina;
+}
 .pie-pagina .grupo-1 {
     width: 100%;
     max-width: 1200px;
@@ -132,7 +134,7 @@ span {
     padding: 45px 0px;
 }
 
-.pie-pagina .grupo-1 .box figure {
+.pie-pagina .grupo-1  .box figure {
     width: 100%;
     height: 100%;
     display: flex;
@@ -140,11 +142,11 @@ span {
     align-items: center;
 }
 
-.pie-pagina .grupo-1 .box figure img {
+.pie-pagina .grupo-1  .box figure img {
     width: 250px;
 }
 
-.pie-pagina .grupo-1 .box h2 {
+.pie-pagina .grupo-1  .box h2 {
     color: #fff;
     margin-bottom: 25px;
     font-size: 20px;
@@ -182,25 +184,63 @@ span {
 .pie-pagina .grupo-2 small {
     font-size: 15px;
 }
-@media (max-width: 836px){
-    .navbar-list{
-        display: flex;
-        justify-content: start !important;
-    }
-    .btn-navbar{
-        display: none;
+/*-----------Maps---------*/
+$maps: (
+    10px: red,
+    20px: blue,
+    30px: yellow,
+    40px: coral
+);
+@each $size, $colors in $maps{
+    .img--#{$size}{
+        box-shadow: $shadow;
+        border: 5px solid black;
+        background-color: $colors;
+        line-height: 200px;
+        text-align: center;
+        font-size: $size;
+        justify-items: center;
+        height: 200px;
+        width: 500px;
+        color: #020202;
+        font-weight: bold;
+        margin: 5px;
     }
 }
-@media (max-width:570px){
-    .carousel-item img{
-        height: 500px;
+
+/*-------mixins------------*/
+@mixin mv($medida: 570px){
+    @media (max-width: $medida){
+        @content;
     }
 }
-@media screen and (max-width:800px){
-    .pie-pagina .grupo-1{
-        width: 90%;
-        grid-template-columns: repeat(1, 1fr);
-        grid-gap:30px;
-        padding: 35px 0px;
+.carousel-item img{
+    @include mv(){height: 500px;}
+}
+/*---------mixins2----------*/
+@mixin flexbox ($dis , $just) {
+    display: $dis;
+    justify-content: $just;
+}
+.navbar-list {
+    @include mv(836px){@include flexbox (flex , start);}
+}
+.btn-navbar{
+    @include mv(836px){@include flexbox (none , none);}
+}
+
+/*---------mixins3---------*/
+@mixin gird ($anch , $col , $gap , $padd) {
+    width: $anch;
+    grid-template-columns: $col;
+    grid-gap: $gap;
+    padding: $padd;
+}
+@mixin tablet($media: 800px){
+    @media screen and (max-width: $media){
+        @content;
     }
+}
+.pie-pagina .grupo-1{
+    @include tablet(){@include gird(90%,repeat(1,1fr),30px ,35px 0px)}
 }
