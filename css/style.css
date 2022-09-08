@@ -87,6 +87,23 @@ span {
   background-color: rgba(128, 128, 128, 0.705) !important;
 }
 
+/*Seccion sobre nosotros*/
+.Quienes-Somos1 h1 {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.emoji i {
+  display: flex !important;
+  justify-content: center;
+  color: rgb(241, 204, 38);
+  padding: 10px;
+}
+
+.sectionNosotros1 p {
+  text-align: center;
+}
+
 /*FORMS FIN*/
 /*Insta Sticky*/
 .logoInstagramfixed {
@@ -259,6 +276,11 @@ form .mainbox {
 a .mainbox {
   margin: 0;
   padding: 2%;
+}
+
+/*Seccion tienda*/
+div.subtitulo {
+  font-size: 10px;
 }
 
 /*:::::Pie de Pagina*/
