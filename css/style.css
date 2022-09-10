@@ -74,17 +74,19 @@ a.nav-link:hover {
 }
 
 span {
-  color: rgb(248, 16, 171);
+  color: rgb(255, 187, 232);
   font-weight: bold;
   font-size: 20px;
+  padding: 20px;
 }
 
 /*CARDS TERMINA*/
 /*FORMS*/
 .forms {
+  padding: 15px;
   margin-top: 60px;
-  border-radius: 0%;
-  background-color: rgba(128, 128, 128, 0.705) !important;
+  border-radius: 15px;
+  background: linear-gradient(180deg, rgba(233, 30, 199, 0.6901960784) 0%, rgba(0, 0, 0, 0.507) 100%);
 }
 
 /*Seccion sobre nosotros*/
@@ -279,8 +281,17 @@ a .mainbox {
 }
 
 /*Seccion tienda*/
+.tiendacontainer {
+  padding: 10px 100px;
+}
+
 div.subtitulo {
   font-size: 10px;
+}
+
+.card-Shop {
+  padding: 0;
+  width: auto;
 }
 
 /*:::::Pie de Pagina*/
@@ -323,7 +334,7 @@ div.subtitulo {
   margin-bottom: 10px;
 }
 
-.pie-pagina .grupo-1 .red-social a, .grupo-1 .grupo-1 .red-social a {
+.pie-pagina .grupo-1 .box .red-social a, .grupo-1 .grupo-1 .box .red-social a {
   display: inline-block;
   text-decoration: none;
   width: 45px;
@@ -334,6 +345,10 @@ div.subtitulo {
   background-color: #0d2033;
   text-align: center;
   transition: all 300ms ease;
+}
+
+div .box {
+  text-align: center;
 }
 
 .pie-pagina .grupo-1 .red-social a:hover, .grupo-1 .grupo-1 .red-social a:hover {
