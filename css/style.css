@@ -292,6 +292,7 @@ div.subtitulo {
 .card-Shop {
   padding: 0;
   width: auto;
+  display: flex;
 }
 
 /*:::::Pie de Pagina*/
