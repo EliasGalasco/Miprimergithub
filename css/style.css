@@ -47,7 +47,7 @@ a.nav-link {
 }
 
 .cardsBody {
-  display: flex;
+  display: inline-flex;
 }
 
 /*SLIDER SECCION INDEX FIN*/
