@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Bona+Nova&family=Taviraj:wght@500&display=swap");
+/*VARIABLES*/
+/*gradiente de color var*/
 /*NAV BAR INICIA*/
 .bg-nav {
   background: linear-gradient(180deg, #020202 0%, rgba(255, 255, 255, 0) 100%);
@@ -17,50 +20,71 @@ a.nav-link {
   color: #fff !important;
 }
 
+/*FOOTER CARRITO*/
+.btn1 {
+  padding: 10px;
+}
+
+/*TIENDA*/
+.btnTienda {
+  display: flex;
+  justify-content: center;
+}
+
+.precioscards {
+  font-size: 30px;
+  font-weight: bolder;
+  text-align: center;
+}
+
 /*NAV BAR FINALIZA*/
 /*SLIDER SECCION INDEX*/
 .slide img {
-  height: 900px;
+  height: 700px;
   background-position: center;
   background-size: cover;
   filter: grayscale(0.3);
 }
 
+.cardsBody {
+  display: inline-flex;
+}
+
 /*SLIDER SECCION INDEX FIN*/
 /*CARDS INICIA*/
 .card {
-  height: 500px;
+  height: 400px;
   width: 400px;
   justify-content: center;
-  margin-top: 40px;
-  margin-left: 10px;
 }
 .card .img {
   height: 250px;
   width: auto;
 }
 .card:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   transition: all 0.7s;
+}
+
+.cardsBody {
+  padding: 10px 1px;
 }
 
 .btn {
   background-color: rgb(241, 134, 209);
 }
-.btn :hover {
+.btn .btn:hover {
   background-color: rgb(206, 41, 156);
   color: #fff;
 }
 
+.card2 {
+  align-items: center;
+}
 .card2 img {
   height: 250px;
   border-radius: 6%;
   width: 440px;
-}
-
-.card2 {
-  align-items: center;
-  margin-top: 10px;
 }
 
 span {
@@ -90,59 +114,143 @@ span {
   line-height: 58px;
   text-align: center;
   font-size: 30px;
-  box-shadow: 0px 1px 10px black;
+  box-shadow: shadow;
   z-index: 100;
 }
-
 .logoInstagramfixed i {
   height: 70px;
   justify-items: center;
   color: #fff;
   font-size: 30px;
 }
-
 .logoInstagramfixed:hover {
   transition: all ease 0.5s;
   transform: scale(1.1);
   filter: opacity(0.8);
 }
 
-.logofacebookfixed {
-  position: fixed;
-  height: 55px;
-  width: 55px;
-  background-image: linear-gradient(rgb(17, 5, 121), rgba(228, 220, 224, 0.678), rgb(22, 7, 77));
-  bottom: 30px;
-  right: 95px;
-  border-radius: 50%;
-  line-height: 58px;
+/*Seccion REGISTRO*/
+:root {
+  --primaryred:#ff424f;
+  --secondaryred:#f84735;
+  --lightblack:#222b31;
+  --darkblack:#191c1f;
+  --mainfont:"Dancing Script", cursive;
+  --secondfont: "Lato", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: var(--secondfont);
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.fullcontent {
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  padding: 6% 10% 5% 10%;
+  background-image: url(../imagenes/logo1.ico);
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../imagenes/backgroun.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  display: flex;
+  flex-direction: row;
+}
+
+.headings {
+  /* background:red;  */
+  flex-basis: 65%;
+  margin-right: 5%;
+}
+
+.headings h1 {
+  font-size: 4rem;
+  font-family: var(--mainfont);
+  color: white;
+  margin: 3% 0% 3% 0%;
+}
+
+.headings h2 {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.formbox {
+  background: rgba(34, 43, 49, 0.7);
+  color: white;
+  flex-basis: 35%;
+  border-top: 10px solid var(--secondaryred);
+  padding: 2% 3%;
+}
+
+.formbox * {
+  margin: 0;
+}
+
+.formbox h3 {
+  font-family: var(--mainfont);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.formbox form label {
+  color: rgba(255, 255, 255, 0.8);
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 0.3rem;
+}
+
+.formbox form .asd {
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: none;
+  background: transparent;
+  height: 2.8rem;
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+form .mainbox {
+  color: white;
+  box-shadow: none;
+  background: var(--secondaryred);
+  height: 2.8rem;
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 10px;
   text-align: center;
-  font-size: 30px;
-  box-shadow: 0px 1px 10px black;
-  z-index: 100;
+  text-decoration: none;
+  border: none;
 }
 
-.logofacebookfixed i {
-  height: 70px;
-  justify-items: center;
-  color: #fff;
-  font-size: 30px;
-}
-
-.logofacebookfixed:hover {
-  transition: all ease 0.5s;
-  transform: scale(1.1);
-  filter: opacity(0.8);
+a .mainbox {
+  margin: 0;
+  padding: 2%;
 }
 
 /*:::::Pie de Pagina*/
-.pie-pagina {
+.pie-pagina, .grupo-1 {
   margin-top: 20px;
   width: 100%;
   background-color: #0a141d;
 }
 
-.pie-pagina .grupo-1 {
+.pie-pagina .grupo-1, .grupo-1 .grupo-1 {
   width: 100%;
   max-width: 1200px;
   margin: auto;
@@ -152,7 +260,7 @@ span {
   padding: 45px 0px;
 }
 
-.pie-pagina .grupo-1 .box figure {
+.pie-pagina .grupo-1 .box figure, .grupo-1 .grupo-1 .box figure {
   width: 100%;
   height: 100%;
   display: flex;
@@ -160,22 +268,22 @@ span {
   align-items: center;
 }
 
-.pie-pagina .grupo-1 .box figure img {
+.pie-pagina .grupo-1 .box figure img, .grupo-1 .grupo-1 .box figure img {
   width: 250px;
 }
 
-.pie-pagina .grupo-1 .box h2 {
+.pie-pagina .grupo-1 .box h2, .grupo-1 .grupo-1 .box h2 {
   color: #fff;
   margin-bottom: 25px;
   font-size: 20px;
 }
 
-.pie-pagina .grupo-1 .box p {
+.pie-pagina .grupo-1 .box p, .grupo-1 .grupo-1 .box p {
   color: #efefef;
   margin-bottom: 10px;
 }
 
-.pie-pagina .grupo-1 .red-social a {
+.pie-pagina .grupo-1 .red-social a, .grupo-1 .grupo-1 .red-social a {
   display: inline-block;
   text-decoration: none;
   width: 45px;
@@ -188,211 +296,110 @@ span {
   transition: all 300ms ease;
 }
 
-.pie-pagina .grupo-1 .red-social a:hover {
+.pie-pagina .grupo-1 .red-social a:hover, .grupo-1 .grupo-1 .red-social a:hover {
   color: aqua;
 }
 
-.pie-pagina .grupo-2 {
+.pie-pagina .grupo-2, .grupo-1 .grupo-2 {
   background-color: #0a1a2a;
   padding: 15px 10px;
   text-align: center;
   color: #fff;
 }
 
-.sectionNosotros1 h2{
-    padding-top: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-.sectionNosotros1 p{
-    display: flex;
-    padding: 10px 15px;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    text-shadow: 0px 1px 10px black;
-}
-.sectionNosotros1 i{
-    color: rgb(243, 197, 127);
-    display: flex;
-    justify-content: center;
+.pie-pagina .grupo-2 small, .grupo-1 .grupo-2 small {
+  font-size: 15px;
 }
 
-.Quienes-Somos1{
-    display: flex;
-    text-align: center;
-    align-items: center;
-}
-/*SECCION CONTACTO*/
-.contact img{
-    height: 600px;
-    width: 540px;
-    border-radius: 5%;
-}
-.contactoslide img{
-    height: 65vh!important;
-    margin-top: 50px;
-    box-shadow: 0px 1px 15px black;
-}
-.cardcontact{
-    height: 900px !important;
-    box-shadow: 0px 1px 20px black;
-}
-/*Seccion REGISTRO*/
-:root{
-    --primaryred:#ff424f;
-    --secondaryred:#f84735;
-    --lightblack:#222b31;
-    --darkblack:#191c1f;
-    --mainfont:'Dancing Script', cursive;
-    --secondfont: 'Lato', sans-serif;
-}
-body{
-	margin: 0;
-	padding: 0;
-	font-size: 16px;
-	line-height: 1.5;
-	font-family:var(--secondfont);
-}
-*,*:before,*:after{
-	box-sizing: border-box;
-}
-img{
-	max-width: 100%;
-	height: auto;
-}
-.fullcontent{
-    width:100%;
-    min-height: 100vh;
-    height: auto;
-    padding:6% 10% 5% 10%;
-    background-image: url(../imagenes/logo1.ico);
-    background:linear-gradient(rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70)),url(../imagenes/backgroun.jpg);
-    background-size: cover;
-    background-position: 50% 50%;
-    display: flex;
-    flex-direction: row;
-}
-.headings{
-     /* background:red;  */
-    flex-basis: 65%;
-    margin-right: 5%;
-}
-.headings h1{
-    font-size: 4rem;
-    font-family:var(--mainfont);
-    color:white;
-    margin:3% 0% 3% 0%;
-}
-.headings h2{
-	font-size:1.2rem;
-    font-weight: 300;
-    color: rgba(255, 255, 255, 0.5);
-}
-.formbox{
-    background:rgb(34,43,49,0.7);
-    color:white;
-    flex-basis: 35%;
-    border-top: 10px solid var(--secondaryred);
-    padding:2% 3%;
-}
-.formbox *{
-    margin: 0;
-}
-.formbox h3{
-    font-family: var(--mainfont);
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-.formbox form label{
-    color: rgba(255, 255, 255, 0.8);
-    display: inline-block;
-    max-width: 100%;
-    margin-bottom: 0.3rem;
-}
-.formbox form .asd{
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    box-shadow: none;
-    background: transparent;
-    height: 2.8rem;
-    display: block;
-    width: 100%;
-    border-radius: 4px;
-    margin-bottom: 1rem;
-}
-form .mainbox{
-    color: white;
-    box-shadow: none;
-    background: var(--secondaryred);
-    height: 2.8rem;
-    display: block;
-    width: 100%;
-    border-radius: 4px;
-    margin-bottom: 10px;
-    text-align: center;
-    text-decoration: none;
-    border: none;
-}
-a .mainbox{
-    margin: 0;
-    padding: 2%;
-}
-/*FIN Seccion REGISTRO*/
-/*Trabaja con nosotros*/
-.imgcontrato img{
-    box-shadow: 0px 1px 30px black;
-}
-.imgcontrato h2{
-    text-shadow: 0px 1px 30px rgb(255, 255, 255);
-}
-/*Seccion tienda*/
-.breadcrumb{
-    border-radius: 10px;
-    background-color: rgb(190, 181, 181);
-    padding: 7px 20px;
+/*-----------Maps---------*/
+.img--10px {
+  box-shadow: 0px 1px 10px black;
+  border: 5px solid black;
+  background-color: red;
+  line-height: 200px;
+  text-align: center;
+  font-size: 10px;
+  justify-items: center;
+  height: 200px;
+  width: 500px;
+  color: #020202;
+  font-weight: bold;
+  margin: 5px;
 }
 
-.cardShop img{
-    padding: 10px 20px;
-    height: 300px;
+.img--20px {
+  box-shadow: 0px 1px 10px black;
+  border: 5px solid black;
+  background-color: blue;
+  line-height: 200px;
+  text-align: center;
+  font-size: 20px;
+  justify-items: center;
+  height: 200px;
+  width: 500px;
+  color: #020202;
+  font-weight: bold;
+  margin: 5px;
 }
-.cardShop img:hover{
-    transform: scale(1.04) !important;
-    transition: all ease 1s !important;
-    filter: brightness(1.1);
+
+.img--30px {
+  box-shadow: 0px 1px 10px black;
+  border: 5px solid black;
+  background-color: yellow;
+  line-height: 200px;
+  text-align: center;
+  font-size: 30px;
+  justify-items: center;
+  height: 200px;
+  width: 500px;
+  color: #020202;
+  font-weight: bold;
+  margin: 5px;
 }
-.cardShop{
-    transform: none !important;
-    background-color: none !important;
-    width: auto;
+
+.img--40px {
+  box-shadow: 0px 1px 10px black;
+  border: 5px solid black;
+  background-color: coral;
+  line-height: 200px;
+  text-align: center;
+  font-size: 40px;
+  justify-items: center;
+  height: 200px;
+  width: 500px;
+  color: #020202;
+  font-weight: bold;
+  margin: 5px;
 }
-@media (max-width: 836px) {
-  .navbar-list {
-    display: flex;
-    justify-content: start !important;
-  }
-  .btn-navbar {
-    display: none;
-  }
-}
+
+/*-------mixins------------*/
 @media (max-width: 570px) {
   .carousel-item img {
     height: 500px;
   }
 }
 
-@media screen and (max-width:800px){
-    .pie-pagina .grupo-1{
-        width: 90%;
-        grid-template-columns: repeat(1, 1fr);
-        grid-gap:30px;
-        padding: 35px 0px;
-    }
+/*---------mixins2----------*/
+@media (max-width: 836px) {
+  .navbar-list {
+    display: flex;
+    justify-content: start;
+  }
 }
-@media (max-width:570px){
-    .carousel-item img{
-        height: 500px;
-    }
+
+@media (max-width: 836px) {
+  .btn-navbar {
+    display: none;
+    justify-content: none;
+  }
 }
+
+/*---------mixins3---------*/
+@media screen and (max-width: 800px) {
+  .pie-pagina .grupo-1, .grupo-1 .grupo-1 {
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+    padding: 35px 0px;
+  }
+}/*# sourceMappingURL=style.css.map */
