@@ -20,6 +20,23 @@ a.nav-link {
   color: #fff !important;
 }
 
+/*FOOTER CARRITO*/
+.btn1 {
+  padding: 10px;
+}
+
+/*TIENDA*/
+.btnTienda {
+  display: flex;
+  justify-content: center;
+}
+
+.precioscards {
+  font-size: 30px;
+  font-weight: bolder;
+  text-align: center;
+}
+
 /*NAV BAR FINALIZA*/
 /*SLIDER SECCION INDEX*/
 .slide img {
@@ -29,22 +46,28 @@ a.nav-link {
   filter: grayscale(0.3);
 }
 
+.cardsBody {
+  display: flex;
+}
+
 /*SLIDER SECCION INDEX FIN*/
 /*CARDS INICIA*/
 .card {
-  height: 500px;
+  height: 400px;
   width: 400px;
   justify-content: center;
-  margin-top: 40px;
-  margin-left: 10px;
 }
 .card .img {
   height: 250px;
   width: auto;
 }
 .card:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   transition: all 0.7s;
+}
+
+.cardsBody {
+  padding: 10px 1px;
 }
 
 .btn {
@@ -57,7 +80,6 @@ a.nav-link {
 
 .card2 {
   align-items: center;
-  margin-top: 10px;
 }
 .card2 img {
   height: 250px;
@@ -105,6 +127,120 @@ span {
   transition: all ease 0.5s;
   transform: scale(1.1);
   filter: opacity(0.8);
+}
+
+/*Seccion REGISTRO*/
+:root {
+  --primaryred:#ff424f;
+  --secondaryred:#f84735;
+  --lightblack:#222b31;
+  --darkblack:#191c1f;
+  --mainfont:"Dancing Script", cursive;
+  --secondfont: "Lato", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: var(--secondfont);
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.fullcontent {
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  padding: 6% 10% 5% 10%;
+  background-image: url(../imagenes/logo1.ico);
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../imagenes/backgroun.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  display: flex;
+  flex-direction: row;
+}
+
+.headings {
+  /* background:red;  */
+  flex-basis: 65%;
+  margin-right: 5%;
+}
+
+.headings h1 {
+  font-size: 4rem;
+  font-family: var(--mainfont);
+  color: white;
+  margin: 3% 0% 3% 0%;
+}
+
+.headings h2 {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.formbox {
+  background: rgba(34, 43, 49, 0.7);
+  color: white;
+  flex-basis: 35%;
+  border-top: 10px solid var(--secondaryred);
+  padding: 2% 3%;
+}
+
+.formbox * {
+  margin: 0;
+}
+
+.formbox h3 {
+  font-family: var(--mainfont);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.formbox form label {
+  color: rgba(255, 255, 255, 0.8);
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 0.3rem;
+}
+
+.formbox form .asd {
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: none;
+  background: transparent;
+  height: 2.8rem;
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+form .mainbox {
+  color: white;
+  box-shadow: none;
+  background: var(--secondaryred);
+  height: 2.8rem;
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+}
+
+a .mainbox {
+  margin: 0;
+  padding: 2%;
 }
 
 /*:::::Pie de Pagina*/
