@@ -36,12 +36,13 @@ function agregarProducto(prod){
     carrito.push(prod)
     console.log(carrito)
     localStorage.setItem("carrito", JSON.stringify(carrito))
+    mostrarCarro(carrito);
 }
 
 /*Agregar items en el modal*/
-let modalBody = document.querySelector("#modalBodyId")
-    modalBody = innerHeight = ""
 function mostrarCarro(array){
+    let modalBody = document.querySelector("#modalBodyId")
+        modalBody.innerHTML = ""
     array.forEach((prod) => {
         const {nombre, precio, imagen} = prod
         modalBody.innerHTML += `
@@ -61,5 +62,24 @@ function mostrarCarro(array){
 mostrarCarro(carrito)
 
 
-
+// function mostrarCarro(array) {
+//     let modalBody = document.querySelector("#modalBodyId");
+//     modalBody.innerHTML = "";
+//     array.forEach((prod) => {
+//     const { nombre, precio, imagen } = prod;
+//     modalBody.innerHTML += `
+//             <div class="modal-contenedor">
+//                 <div>
+//                     <img class="img-fluid img-carrito" src="${imagen}"/>
+//                 </div>
+//                 <div>
+//                     <p>Producto: ${nombre} </p>
+//                     <p>Precio: ${precio} </p>
+//                     <button class="btn">Eliminar Producto</button>
+//                 </div>
+//             </div>
+//             `;
+//     });
+//     }
+//     mostrarCarro(carrito)
 
