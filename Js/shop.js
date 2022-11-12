@@ -6,8 +6,8 @@ console.log(todosLosProductos);
 const carrito = []
 
 let productos = document.querySelector("#productos");
-for(let prod of todosLosProductos){
-    const {id, nombre, descripcion, precio, imagen} = prod
+for (let prod of todosLosProductos) {
+    const { id, nombre, descripcion, precio, imagen } = prod
     let cardsProductos = document.createElement("div")
     cardsProductos.className = "col-12 col-md-6 col-lg-6 col-xl-4 cardsBody";
     cardsProductos.innerHTML += `
@@ -32,54 +32,54 @@ for(let prod of todosLosProductos){
 
 /*FUNCTION PARA BUSCAR POR ID*/
 /*GUARDAR AL CARRITO*/
-function agregarProducto(prod){
-    carrito.push(prod)
-    console.log(carrito)
-    localStorage.setItem("carrito", JSON.stringify(carrito))
-    mostrarCarro(carrito);
+function agregarProducto(prod) {
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'El producto fue agregado !!exitosamente!!',
+        showConfirmButton: false,
+        timer: 1500
+    })
+        carrito.push(prod)
+        console.log(carrito)
+        localStorage.setItem("carrito", JSON.stringify(carrito))
+        mostrarCarro(carrito);
 }
 
 /*Agregar items en el modal*/
-function mostrarCarro(array){
+function mostrarCarro(array) {
     let modalBody = document.querySelector("#modalBodyId")
-        modalBody.innerHTML = ""
+    modalBody.innerHTML = ""
     array.forEach((prod) => {
-        const {nombre, precio, imagen} = prod
+        const { id, nombre, precio, imagen } = prod
         modalBody.innerHTML += `
-        <div class="modal-contenedor">
+        <div id="productosEnCarrito${id}" class="modal-contenedor">
             <div>
                 <img class="img-fluid img-carrito" src="${imagen}"/>
             </div>
             <div>
-                <p>Producto: ${nombre} </p>
-                <p>Precio: ${precio} </p>
-                <button class="btn">Eliminar Producto</button>
+                <p class="precioscards">Producto: ${nombre} </p>
+                <p class="precioscards"> $${precio} </p>
+                <button id="btnEliminar${id}" class="btn btnEliminarCarrito">Eliminar Producto</button>
             </div>
         </div>
         `
     })
+    /*Eliminacion */
+    array.forEach((prod, indice) => {
+        const { id } = prod
+        document.getElementById(`btnEliminar${id}`).addEventListener("click", () => {
+            /*Eliminar del DOM */
+            let cardProductos = document.querySelector(`#productosEnCarrito${id}`)
+            cardProductos.remove()
+            /*Eliminar del array */
+            carrito.splice(indice, 1)
+            /*Eliminar del Storage */
+            localStorage.setItem("carrito", JSON.stringify(carrito))
+            
+        })
+    });
 }
-mostrarCarro(carrito)
 
 
-// function mostrarCarro(array) {
-//     let modalBody = document.querySelector("#modalBodyId");
-//     modalBody.innerHTML = "";
-//     array.forEach((prod) => {
-//     const { nombre, precio, imagen } = prod;
-//     modalBody.innerHTML += `
-//             <div class="modal-contenedor">
-//                 <div>
-//                     <img class="img-fluid img-carrito" src="${imagen}"/>
-//                 </div>
-//                 <div>
-//                     <p>Producto: ${nombre} </p>
-//                     <p>Precio: ${precio} </p>
-//                     <button class="btn">Eliminar Producto</button>
-//                 </div>
-//             </div>
-//             `;
-//     });
-//     }
-//     mostrarCarro(carrito)
 
