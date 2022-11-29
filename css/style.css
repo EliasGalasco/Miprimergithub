@@ -26,6 +26,29 @@ a.nav-link {
 }
 
 /*TIENDA JS*/
+.footerCarrito {
+  display: inline-flex;
+}
+
+.precioTotal {
+  display: inline-flex;
+  font-weight: bolder;
+  font-size: 25px;
+}
+
+.buscadorTienda {
+  margin-left: 10px;
+  border-radius: 10px;
+  height: 40px;
+}
+
+.btn-search {
+  margin: 2px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
 .btnEliminarCarrito {
   display: inline-flex;
   margin-bottom: 20px;
