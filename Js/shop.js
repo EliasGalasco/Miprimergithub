@@ -5,21 +5,32 @@ const carritoContenedor = document.querySelector(`#carritoContenedor`)
 const reiniciarCarro = document.querySelector(`#reiniciarCarro`)
 const precioTotal = document.querySelector(`#precioTotal`)
 const finalizarCompra = document.querySelector(`#finalizarCompra`)
+const productos = document.querySelector("#productos")
 
 
 
-//ARRAY de productos
-const todosLosProductos = [aqtua, caffezino, ego10, egofrutas, egolife, egoherbal, estop]
+
 /*ARRAY VACIO CARRITO*/
 let carrito = []
 
+
+document.addEventListener("DOMContentLoaded", () => {
+    carrito = JSON.parse(localStorage.getItem("carro")) || []
+    mostrarCarro()
+})
+
+//ARRAY de productos
+const todosLosProductos = [aqtua, caffezino, ego10, egofrutas, egolife, egoherbal, estop]
+
+
 //Bucle para cars
+
 for (let prod of todosLosProductos) {
     const { id, nombre, descripcion, precio, imagen, cantidad } = prod
     let cardsProductos = document.createElement("div")
     cardsProductos.className = "col-12 col-md-6 col-lg-6 col-xl-4 cardsBody";
     cardsProductos.innerHTML += `
-        <div class="card cardShop h-100">
+        <div class="card cardShop h-100" id="resultado">
             <img src="../imagenes/${imagen}" class="card-img-top cardShop" alt="${nombre}">
             <div class="card-body">
                 <h5 class="card-title">${nombre}</h5>
@@ -37,29 +48,22 @@ for (let prod of todosLosProductos) {
     boton.addEventListener('click', () => {
         agregarProducto(prod)
     })
-
 };
+
+
+/*FUNCTION btnsearch PARA BUSCADOR */
 
 
 /*FUNCTION btn PARA BUSCADOR */
 
 
 
-/*FUNCION Input BUSCADOR */
-buscadorTienda.addEventListener("input", () => { buscarProducto(buscadorTienda.value, todosLosProductos) })
 
-function buscarProducto(buscador, array) {
-    console.log(buscador)
-    let busqueda = array.filter(
-        (producto) => producto.nombre == producto
-    )
-        console.log(busqueda)
-}
 
 /*REINICIAR CARRITO DE COMPRAS*/
 reiniciarCarro.addEventListener("click", () => {
     carrito.length = []
-    mostrarCarro(carrito)
+    mostrarCarro()
 })
 
 /*GUARDAR AL CARRITO*/
@@ -72,20 +76,17 @@ function agregarProducto(prod) {
         timer: 1500
     })
     carrito.push(prod)
-    mostrarCarro(carrito);
+    mostrarCarro();
 }
 /*Guardar productos en storage */
 function guardarStorage() {
     localStorage.setItem("carro", JSON.stringify(carrito))
 }
-document.addEventListener("DOMContentLoaded", () => {
-    carrito = JSON.parse(localStorage.getItem("carro")) || []
-    mostrarCarro()
-})
+
 
 
 /*Agregar items en el modal*/
-const mostrarCarro = () => {
+const mostrarCarro = (mayorMenor) => {
     let modalBody = document.querySelector("#modalBodyId")
     modalBody.innerHTML = ""
     carrito.forEach((prod) => {
@@ -112,7 +113,10 @@ const mostrarCarro = () => {
             let cardProductos = document.querySelector(`#productosEnCarrito${id}`)
             cardProductos.remove()
             /*Eliminar del array */
-            carrito.splice(i, 1)
+            let eliminarProducto = carrito.find(producto => producto.id == prod.id)
+            let loc = carrito.indexOf(eliminarProducto)
+            carrito.splice(loc, 1)
+            mostrarCarro()
             /*Eliminar del Storage */
             localStorage.setItem("carro", JSON.stringify(carrito))
 
@@ -134,6 +138,15 @@ const mostrarCarro = () => {
 /*Finalizar Compra SweetAlert */
 
 finalizarCompra.addEventListener(`click`, () => {
+    if (carrito.length === 0) {
+        Swal.fire({
+            position: 'center',
+            icon: 'warning',
+            title: 'No agregaste ningun producto!!',
+            showConfirmButton: false,
+            timer: 1500
+        })
+    }
     compraFinalizada()
 })
 
@@ -147,7 +160,7 @@ function compraFinalizada() {
     })
     swalWithBootstrapButtons.fire({
         title: 'Estas Seguro que quieres continuar?',
-        text: "Tranquilo/a puede cancelarlo si no lo estas!",
+        text: "Tranquilo/a puedes cancelarlo si no lo estas!",
         icon: 'warning',
         showCancelButton: true,
         confirmButtonText: 'Si, Continuar!',
@@ -160,7 +173,8 @@ function compraFinalizada() {
                 'Tu orden fue registrada con exito!.',
                 'success'
             )
-            carrito.length = []
+            carrito = []
+            mostrarCarro()
             localStorage.removeItem("carro")
         } else if (
             result.dismiss === Swal.DismissReason.cancel
@@ -171,5 +185,46 @@ function compraFinalizada() {
                 'error'
             )
         }
+
     })
+}
+
+
+const selectOrden = document.querySelector(`#selectOrden`)
+selectOrden.addEventListener("change",()=>{
+    if(selectOrden.value == 1){
+        ordenarMenorMayor(todosLosProductos)
+    }else if(selectOrden.value == 2){
+        ordenarMayorMenor(todosLosProductos)
+    }else if(selectOrden.value == 3){
+        ordenarAlfabeticamente(todosLosProductos)
+    }else{
+        mostrarCarro(todosLosProductos)
+    }
+})
+
+
+function ordenarMayorMenor(array) {
+    let mayorMenor = [].concat(array)
+    mayorMenor.sort((a, b) => (b.precio - a.precio))
+    console.log(array)
+    console.log(mayorMenor)
+    mostrarCarro(mayorMenor)
+}
+function ordenarMenorMayor(array) {
+    let menorMayor = [].concat(array)
+    menorMayor.sort((a, b) => (a.precio - b.precio))
+    console.log(array)
+    console.log(menorMayor)
+    mostrarCarro(menorMayor)
+}
+function ordenarAlfabeticamente(array) {
+    let alfabeticamente = array.slice()
+    alfabeticamente.sort((a, b) => {
+        if (a.titulo < b.titulo) return -1
+        if (a.titulo > b.titulo) return 1
+        return 0
+    })
+    console.log(array)
+    mostrarCarro(alfabeticamente)
 }

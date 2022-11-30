@@ -49,6 +49,18 @@ a.nav-link {
   align-items: center;
 }
 
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.textShop {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
 .btnEliminarCarrito {
   display: inline-flex;
   margin-bottom: 20px;
