@@ -20,11 +20,27 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 //ARRAY de productos
-const todosLosProductos = [aqtua, caffezino, ego10, egofrutas, egolife, egoherbal, estop]
+const todosLosProductos = []
 
 
+
+/*CARGAR ESTANTERIA JSON */
+
+const cargarProductos = async()=>{
+    const res = await fetch ("../productos.json")
+    const data = await res.json()
+    console.log(data)
+    for(let prod of data){
+        let prodNuevo = new productosShine(prod.id,prod.nombre,prod.descripcion,prod.precio,prod.imagen,prod.cantidad)
+        todosLosProductos.push(prodNuevo)
+    }
+}
+cargarProductos()
+console.log(todosLosProductos)
 //Bucle para cars
 
+
+const renderizar = (todosLosProductos)=>{
 for (let prod of todosLosProductos) {
     const { id, nombre, descripcion, precio, imagen, cantidad } = prod
     let cardsProductos = document.createElement("div")
@@ -48,9 +64,9 @@ for (let prod of todosLosProductos) {
     boton.addEventListener('click', () => {
         agregarProducto(prod)
     })
-};
+}};
 
-
+renderizar(todosLosProductos)
 /*FUNCTION btnsearch PARA BUSCADOR */
 
 
@@ -86,7 +102,7 @@ function guardarStorage() {
 
 
 /*Agregar items en el modal*/
-const mostrarCarro = (mayorMenor) => {
+const mostrarCarro = () => {
     let modalBody = document.querySelector("#modalBodyId")
     modalBody.innerHTML = ""
     carrito.forEach((prod) => {
@@ -199,24 +215,26 @@ selectOrden.addEventListener("change",()=>{
     }else if(selectOrden.value == 3){
         ordenarAlfabeticamente(todosLosProductos)
     }else{
-        mostrarCarro(todosLosProductos)
+        renderizar(todosLosProductos)
     }
 })
 
 
-function ordenarMayorMenor(array) {
-    let mayorMenor = [].concat(array)
-    mayorMenor.sort((a, b) => (b.precio - a.precio))
-    console.log(array)
-    console.log(mayorMenor)
-    mostrarCarro(mayorMenor)
-}
 function ordenarMenorMayor(array) {
     let menorMayor = [].concat(array)
-    menorMayor.sort((a, b) => (a.precio - b.precio))
+    menorMayor.sort((a, b) => (b.precio - a.precio))
     console.log(array)
     console.log(menorMayor)
-    mostrarCarro(menorMayor)
+    productos.innerHTML = ""
+    renderizar(menorMayor)
+}
+function ordenarMayorMenor(array) {
+    let mayorMenor = [].concat(array)
+    mayorMenor.sort((a, b) => (a.precio - b.precio))
+    console.log(array)
+    console.log(mayorMenor)
+    productos.innerHTML = ""
+    renderizar(mayorMenor)
 }
 function ordenarAlfabeticamente(array) {
     let alfabeticamente = array.slice()
@@ -226,5 +244,6 @@ function ordenarAlfabeticamente(array) {
         return 0
     })
     console.log(array)
-    mostrarCarro(alfabeticamente)
+    productos.innerHTML = ""
+    renderizar(alfabeticamente)
 }
