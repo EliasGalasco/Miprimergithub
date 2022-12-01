@@ -5,7 +5,7 @@
         "cantidad": 1,
         "descripcion": "Recomendado para:Presión alta , problemas deinsuficiencia cardíaca, cansanciocrónico, hígado graso y fortalecerel sistema inmune",
         "precio": 1500,
-        "imagen": "shop2.jpg"
+        "imagen": "../imagenes/shop2.jpg"
     },
     {
         "id": 2,
@@ -13,7 +13,7 @@
         "cantidad": 1,
         "descripcion":  "Recomendado para:Presión alta , problemas deinsuficiencia cardíaca, cansanciocrónico, hígado graso y fortalecerel sistema inmune",
         "precio": 2500,
-        "imagen": "shop3.jpg"
+        "imagen": "../imagenes/shop3.jpg"
     },
     {
         
@@ -22,7 +22,7 @@
         "cantidad": 1,
         "descripcion": "Recomendado para:Presión alta , problemas deinsuficiencia cardíaca, cansanciocrónico, hígado graso y fortalecerel sistema inmune",
         "precio": 6500,
-        "imagen": "shop4.jpg"
+        "imagen": "../imagenes/shop4.jpg"
     },
     {
         "id": 4,
@@ -30,7 +30,7 @@
         "cantidad": 1,
         "descripcion": "Recomendado para:Presión alta , problemas deinsuficiencia cardíaca, cansanciocrónico, hígado graso y fortalecerel sistema inmune",
         "precio": 5500,
-        "imagen": "shop5.jpg"
+        "imagen": "../imagenes/shop5.jpg"
     },
     {
         "id": 5,
@@ -38,7 +38,7 @@
         "cantidad": 1,
         "descripcion": "Recomendado para:Presión alta , problemas deinsuficiencia cardíaca, cansanciocrónico, hígado graso y fortalecerel sistema inmune",
         "precio": 3500,
-        "imagen": "shop6.jpg"
+        "imagen": "../imagenes/shop6.jpg"
     },
     {
         "id": 6,
@@ -46,7 +46,7 @@
         "cantidad": 1,
         "descripcion": "Recomendado para:Presión alta , problemas deinsuficiencia cardíaca, cansanciocrónico, hígado graso y fortalecerel sistema inmune",
         "precio": 2500,
-        "imagen": "shop7.jpg"
+        "imagen": "../imagenes/shop7.jpg"
     },
     {
         "id": 7,
@@ -54,6 +54,6 @@
         "cantidad": 1,
         "descripcion": "Recomendado para:Presión alta , problemas deinsuficiencia cardíaca, cansanciocrónico, hígado graso y fortalecerel sistema inmune",
         "precio": 6400,
-        "imagen": "shop8.jpg"
+        "imagen": "../imagenes/shop8.jpg"
     }
 ]

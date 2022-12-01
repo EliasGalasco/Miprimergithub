@@ -1,6 +1,5 @@
 /*DOM SELECTOR*/
-const buscadorTienda = document.querySelector(`.buscadorTienda`);
-const btnSearch = document.querySelector(`.btn-search`);
+
 const carritoContenedor = document.querySelector(`#carritoContenedor`)
 const reiniciarCarro = document.querySelector(`#reiniciarCarro`)
 const precioTotal = document.querySelector(`#precioTotal`)
@@ -29,16 +28,21 @@ const todosLosProductos = []
 const cargarProductos = async()=>{
     const res = await fetch ("../productos.json")
     const data = await res.json()
-    console.log(data)
     for(let prod of data){
         let prodNuevo = new productosShine(prod.id,prod.nombre,prod.descripcion,prod.precio,prod.imagen,prod.cantidad)
         todosLosProductos.push(prodNuevo)
     }
+    renderizar(todosLosProductos)
 }
 cargarProductos()
 console.log(todosLosProductos)
-//Bucle para cars
 
+
+
+
+
+
+//Bucle para cars
 
 const renderizar = (todosLosProductos)=>{
 for (let prod of todosLosProductos) {
@@ -67,11 +71,27 @@ for (let prod of todosLosProductos) {
 }};
 
 renderizar(todosLosProductos)
-/*FUNCTION btnsearch PARA BUSCADOR */
 
 
 /*FUNCTION btn PARA BUSCADOR */
+const buscadorTienda = document.querySelector(`.buscadorTienda`);
+const btnSearch = document.querySelector(`.btn-search`);
 
+buscadorTienda.addEventListener("input", ()=>{Info(buscadorTienda.value, todosLosProductos)})
+
+
+function Info(buscado, array){
+    let busqueda = array.filter(
+        (prod) => prod.nombre.toLowerCase().includes(buscado.toLowerCase())
+    )
+    busqueda.length == 0 ? 
+    (productos.innerHTML = `<h3 class="text-warning text-center m-2">No encontramos coincidencias intente de nuevo con otros productos...<br><span>A continuación tiene todo nuestro catálogo disponible</span> </h3>`
+    , renderizar(array)) 
+    : (productos.innerHTML = "", renderizar(busqueda))
+}
+
+
+/*FUNCTION btnsearch PARA BUSCADOR */
 
 
 
@@ -135,8 +155,6 @@ const mostrarCarro = () => {
             mostrarCarro()
             /*Eliminar del Storage */
             localStorage.setItem("carro", JSON.stringify(carrito))
-
-
         })
     });
     if (carrito.length === 0) {
@@ -223,16 +241,12 @@ selectOrden.addEventListener("change",()=>{
 function ordenarMenorMayor(array) {
     let menorMayor = [].concat(array)
     menorMayor.sort((a, b) => (b.precio - a.precio))
-    console.log(array)
-    console.log(menorMayor)
     productos.innerHTML = ""
     renderizar(menorMayor)
 }
 function ordenarMayorMenor(array) {
     let mayorMenor = [].concat(array)
     mayorMenor.sort((a, b) => (a.precio - b.precio))
-    console.log(array)
-    console.log(mayorMenor)
     productos.innerHTML = ""
     renderizar(mayorMenor)
 }
@@ -243,7 +257,7 @@ function ordenarAlfabeticamente(array) {
         if (a.titulo > b.titulo) return 1
         return 0
     })
-    console.log(array)
     productos.innerHTML = ""
     renderizar(alfabeticamente)
 }
+
